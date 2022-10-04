@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+   <link rel="stylesheet" href="stylesheet.css">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style> /* Custom made css to center our card */
@@ -31,15 +33,15 @@
           <h3>Years APP</h3>
           <hr>
           <form>
-            <!-- Input for user to enter their age --> 
+            <!-- Input for user to enter their age -->
             <div class="form-group">
               <label for="exampleFormControlInput1">Enter Your Age</label>
               <input type="number" class="form-control" id="myInput_2" placeholder="Enter ur age please!">
             </div>
 
-            <!--form group, let user select hours spent sleeping per day --> 
+            <!--form group, let user select hours spent sleeping per day -->
             <div class="form-group">
-              <label for="exampleFormControlSelect1">Hours you Spend Sleping</label>
+              <label for="exampleFormControlSelect1">Hours you Spend Sleeping</label>
               <select class="form-control" id="myInput_1">
                 <option>1</option>
                 <option>2</option>
@@ -54,7 +56,7 @@
               </select>
             </div>
             <div class="form-group">
-              <!--call compute function when user click button --> 
+              <!--call compute function when user click button -->
               <button type="button" onclick="Compute();" class="btn btn-primary">Calculate</button>
             </div>
           </form>
@@ -65,7 +67,7 @@
         </div>
       </div>
     </div>
-        
+
     <script type="text/javascript">
 
       function Compute(){
@@ -73,12 +75,12 @@
             var currentAge = document.getElementById("myInput_2").value; //current age of user//
             const hrsin1yr= 8760;  //Hours in 1 year //
             const daysin1yr = 365;  //number of days in 1year //
-          
+
             const hrsslptin1yr = ahspd * daysin1yr;     // Hours slept in 1year//
             const tthrsslpt = currentAge * hrsslptin1yr; // Total hours slept uptodate//
             const ttyrsslpt = tthrsslpt / hrsin1yr;     // Total years spent sleeping //
             const ttyrsawake = currentAge - ttyrsslpt;   // total years spent awake//
-          
+
             console.log( " Years Spent Sleping :  " + ttyrsslpt + "Years");
             console.log( " Years Spent awake :  " + ttyrsawake + "Years");
 
@@ -88,8 +90,8 @@
             } else {
               // if age has been entered, push our results in DOM elements
               document.getElementById("result_1").innerHTML = ("Years Spent Sleeping : ") +  Math.round(ttyrsslpt)
-              document.getElementById("result_2").innerHTML = ("Years Spent Awake : ") +  Math.round(ttyrsawake) 
-            }       
+              document.getElementById("result_2").innerHTML = ("Years Spent Awake : ") +  Math.round(ttyrsawake)
+            }
       }
     </script>
 
