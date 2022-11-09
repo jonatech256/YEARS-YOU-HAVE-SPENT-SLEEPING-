@@ -1,0 +1,54 @@
+[1mdiff --git a/years spent asleep caluclator.js b/years spent asleep caluclator.js[m
+[1mindex 4719a9b..432e74d 100644[m
+[1m--- a/years spent asleep caluclator.js[m	
+[1m+++ b/years spent asleep caluclator.js[m	
+[36m@@ -1,19 +1,30 @@[m
+[31m-//Average hrs slept per day//[m
+[31m-let ahspd = 0;[m
+[31m-//current age of user//[m
+[31m-let currentAge= 0;[m
+[31m-//Hours in 1 year //[m
+[31m-const hrsin1yr= 8760;[m
+[31m-//number of days in 1year //[m
+[31m-const daysin1yr = 365;[m
+[31m-// Hours slept in 1year//[m
+[31m-const hrsslptin1yr = ahspd * daysin1yr;[m
+[31m-// Total hours slept uptodate//[m
+[31m-const tthrsslpt = currentAge * hrsslptin1yr;[m
+[31m-// Total years spent sleeping //[m
+[31m-const ttyrsslpt = tthrsslpt / hrsin1yr;[m
+[31m-// total years spent awake//[m
+[31m-const ttyrsawake = currentAge - ttyrsslpt;[m
+[32m+[m[32m// //Average hrs slept per day//[m
+[32m+[m[32m// let ahspd = 5;[m
+[32m+[m[32m// //current age of user//[m
+[32m+[m[32m// let currentAge= 22;[m
+[32m+[m[32m// //Hours in 1 year //[m
+[32m+[m[32m// const hrsin1yr= 8760;[m
+[32m+[m[32m// //number of days in 1year //[m
+[32m+[m[32m// const daysin1yr = 365;[m
+[32m+[m[32m// // Hours slept in 1year//[m
+[32m+[m[32m// const hrsslptin1yr = ahspd * daysin1yr;[m
+[32m+[m[32m// // Total hours slept uptodate//[m
+[32m+[m[32m// const tthrsslpt = currentAge * hrsslptin1yr;[m
+[32m+[m[32m// // Total years spent sleeping //[m
+[32m+[m[32m// const ttyrsslpt = tthrsslpt / hrsin1yr;[m
+[32m+[m[32m// // total years spent awake//[m
+[32m+[m[32m// const ttyrsawake = currentAge - ttyrsslpt;[m
+ [m
+[31m-console.log( " Years Spent Sleping :  " + ttyrsslpt + "Years");[m
+[31m-console.log( " Years Spent awake :  " + ttyrsawake + "Years");[m
+[32m+[m[32m// console.log( " Years Spent Sleping :  " + ttyrsslpt + "Years");[m
+[32m+[m[32m// console.log( " Years Spent awake :  " + ttyrsawake + "Years");[m
+[32m+[m
+[32m+[m[32mfunction yearsSpentSleeping( age, avg){[m
+[32m+[m[32m    const hrsin1yr = 8760;[m[41m [m
+[32m+[m[32m    const daysin1yr = 365;[m
+[32m+[m[41m    [m
+[32m+[m[32m    const hrsslptin1yr = avg * daysin1yr;[m
+[32m+[m[32m    const tthrsslpt = age * hrsslptin1yr;[m
+[32m+[m
+[32m+[m[32m    return Math.round(tthrsslpt / hrsin1yr)[m[41m [m
+[32m+[m[32m}[m
+[32m+[m[32mconsole.log(yearsSpentSleeping(5,22));[m
+\ No newline at end of file[m
